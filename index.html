@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mein-xpost</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  nav a[aria-current="page"] { border-color: var(--accent); color: var(--accent); }
+  :root {
+    --bg: #fbfbfa;
+    --surface: #f1f1ee;
+    --fg: #22201e;
+    --muted: #625d58;
+    --line: #dedbd6;
+    --accent: #c4501d;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #181715; --surface: #23211e; --fg: #eeebe6; --muted: #aaa49c; --line: #38352f; --accent: #f08350;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #181715; --surface: #23211e; --fg: #eeebe6; --muted: #aaa49c; --line: #38352f; --accent: #f08350;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 var(--body);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 64px;
+    margin: 0;
+  }
+  .page { max-width: 42rem; margin: 0 auto; display: grid; gap: 40px; }
+
+  header { display: grid; gap: 18px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 40px; height: 40px; flex: none; }
+  .brand b { font: 700 1.25rem/1.2 var(--display); }
+  .brand span { display: block; color: var(--muted); font-size: 0.9rem; }
+  h1 { font: 700 clamp(2rem, 6vw, 2.6rem)/1.1 var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  .meta { color: var(--muted); font-size: 0.92rem; margin: 0; }
+
+  nav { display: flex; flex-wrap: wrap; gap: 10px; }
+  nav a {
+    color: var(--fg); text-decoration: none; border: 1px solid var(--line);
+    border-radius: 999px; padding: 6px 14px; font-size: 0.95rem;
+  }
+  nav a:hover { border-color: var(--accent); color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .summary {
+    background: var(--surface); border-radius: 12px; padding: 18px 20px;
+    display: grid; gap: 8px; font-size: 0.97rem;
+  }
+  .summary p { margin: 0; }
+  .label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+  section { display: grid; gap: 4px; scroll-margin-top: 24px; min-width: 0; }
+  section + section { border-top: 1px solid var(--line); padding-top: 40px; }
+  h2 { font: 700 1.7rem/1.2 var(--display); margin: 0 0 8px; text-wrap: balance; }
+  h3 { font: 700 1.1rem/1.3 var(--display); margin: 22px 0 2px; }
+  p, ul { margin: 0 0 10px; }
+  ul { padding-left: 1.2em; }
+  li + li { margin-top: 4px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; background: var(--surface); padding: 1px 6px; border-radius: 5px; }
+
+  .table-wrap { overflow-x: auto; margin: 6px 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 700; color: var(--muted); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .contact { font-weight: 700; user-select: all; }
+  footer { color: var(--muted); font-size: 0.88rem; border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#d9622b"/><path d="M16 44 46 16M30 16h16v16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="22" r="4" fill="#fff"/><circle cx="42" cy="44" r="4" fill="#fff"/></svg>
+      <div><b>mein-xpost</b><span>Privates Werkzeug für eigene TikTok-Konten</span></div>
+    </div>
+    <h1>mein-xpost</h1>
+    <p class="meta">Stand: 20. Oktober 2026</p>
+    <nav aria-label="Seiten">
+      <a href="index.html" aria-current="page">Übersicht</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+      <a href="privacy.html">Datenschutzerklärung</a>
+    </nav>
+  </header>
+  <div class="summary" lang="en">
+    <span class="label">Summary in English</span>
+    <p>mein-xpost is a private, non-commercial tool. It is used only by its operator to upload clips of the operator’s own Roblox games as drafts to the operator’s own TikTok accounts. There is no public sign-up and no other users.</p>
+    <p>Data received from TikTok (open ID, display name, avatar, access tokens) is stored only on the operator’s own computer, used only to upload drafts, never sold or shared, and deleted when an account is disconnected.</p>
+  </div>
+  <section id="terms" aria-labelledby="terms-title">
+    <h2 id="terms-title">Nutzungsbedingungen</h2>
+
+    <h3>1. Was mein-xpost ist</h3>
+    <p>mein-xpost ist ein privates, nicht kommerzielles Werkzeug. Es bearbeitet kurze Videos aus den eigenen Roblox-Spielen des Betreibers und lädt sie als Entwurf in den Posteingang seiner eigenen TikTok-Konten. Veröffentlicht wird ein Video erst, wenn der Betreiber es in der TikTok-App selbst postet.</p>
+
+    <h3>2. Wer es nutzen darf</h3>
+    <p>Nur der Betreiber. Es gibt keine öffentliche Anmeldung, und mein-xpost wird keinen anderen Personen angeboten. Verbunden werden ausschließlich TikTok-Konten, die dem Betreiber gehören.</p>
+
+    <h3>3. Inhalte</h3>
+    <ul>
+      <li>Hochgeladen werden nur Inhalte, an denen der Betreiber die Rechte hat, insbesondere Aufnahmen seiner eigenen Spiele und selbst erstellte oder lizenzfreie Musik.</li>
+      <li>Für alle Inhalte gelten zusätzlich die Nutzungsbedingungen und Community-Richtlinien von TikTok.</li>
+    </ul>
+
+    <h3>4. TikTok</h3>
+    <p>mein-xpost ist kein Angebot von TikTok und steht in keiner Verbindung zu TikTok oder Roblox. Die Anbindung erfolgt über die offiziellen Schnittstellen von TikTok (Login Kit und Content Posting API).</p>
+
+    <h3>5. Keine Gewähr</h3>
+    <p>mein-xpost wird ohne Gewähr betrieben. Es kann jederzeit geändert oder eingestellt werden.</p>
+
+    <h3>6. Änderungen</h3>
+    <p>Diese Bedingungen können angepasst werden. Es gilt die jeweils auf dieser Seite veröffentlichte Fassung.</p>
+  </section>
+  <section id="privacy" aria-labelledby="privacy-title">
+    <h2 id="privacy-title">Datenschutzerklärung</h2>
+
+    <h3>1. Verantwortlich</h3>
+    <p>Betreiber von mein-xpost<br>Kontakt für Datenschutz-Anfragen: <span class="contact">[E-Mail-Adresse folgt]</span></p>
+
+    <h3>2. Welche Daten verarbeitet werden</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Daten</th><th>Woher</th><th>Wofür</th></tr></thead>
+        <tbody>
+          <tr><td>TikTok-Kennung (Open ID), Anzeigename, Profilbild</td><td>TikTok, Berechtigung <code>user.info.basic</code></td><td>Anzeigen, welches Konto verbunden ist</td></tr>
+          <tr><td>Zugriffs- und Erneuerungsschlüssel (Tokens)</td><td>TikTok-Anmeldung</td><td>Videos im Auftrag des Kontos hochladen</td></tr>
+          <tr><td>Videos, Ton-Dateien, Beschreibungen, geplante Zeiten</td><td>Vom Betreiber selbst eingegeben</td><td>Clips bearbeiten und als Entwurf hochladen, Berechtigung <code>video.upload</code></td></tr>
+          <tr><td>Upload-Status und Verlauf</td><td>TikTok und mein-xpost</td><td>Nachvollziehen, ob ein Upload geklappt hat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>3. Wo die Daten liegen</h3>
+    <p>Alle Daten werden ausschließlich auf dem eigenen Computer des Betreibers gespeichert. Es gibt keinen Server, keine Cloud-Speicherung und kein Nutzerkonto bei mein-xpost.</p>
+
+    <h3>4. Weitergabe</h3>
+    <p>Daten gehen nur an TikTok, und nur so weit, wie es für das Hochladen eines Entwurfs nötig ist. Es gibt keinen Verkauf, keine Weitergabe an Dritte, keine Werbung und keine Analyse- oder Tracking-Dienste.</p>
+
+    <h3>5. Cookies</h3>
+    <p>mein-xpost verwendet ein einziges, technisch notwendiges Cookie. Es erlaubt dem Handy des Betreibers den Zugriff auf mein-xpost im eigenen WLAN. Weitere Cookies gibt es nicht.</p>
+
+    <h3>6. Wie lange die Daten bleiben</h3>
+    <ul>
+      <li>Zugriffsschlüssel werden gelöscht, sobald ein Konto in mein-xpost getrennt wird.</li>
+      <li>Der Zugriff lässt sich außerdem jederzeit in der TikTok-App unter den verbundenen Apps entziehen.</li>
+      <li>Videos und Verlauf bleiben, bis der Betreiber sie löscht.</li>
+    </ul>
+
+    <h3>7. Deine Rechte</h3>
+    <p>Nach der Datenschutz-Grundverordnung (DSGVO) hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit sowie das Recht, der Verarbeitung zu widersprechen. Wende dich dafür an die oben genannte Kontaktadresse. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>
+  </section>
+  <footer>mein-xpost · Privates Projekt, kein Angebot von TikTok oder Roblox.</footer>
+</div>
+</body>
+</html>
